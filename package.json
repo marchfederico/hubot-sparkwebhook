@@ -5,7 +5,7 @@
     "name": "Marcello Federico"
   },
   "keywords": [
-    "hubot-sparkwebhook adapter"
+    "Cisco Spark hubot-sparkwebhook adapter"
   ],
   "description": "A Cisco Spark adapter for hubot using webhooks",
   "licenses": [
