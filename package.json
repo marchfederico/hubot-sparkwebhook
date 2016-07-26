@@ -1,0 +1,32 @@
+{
+  "name": "hubot-sparkwebhook",
+  "version": "0.1.0",
+  "author": {
+    "name": "Marcello Federico"
+  },
+  "keywords": [
+    "hubot-sparkwebhook adapter"
+  ],
+  "description": "A Cisco Spark adapter for hubot using webhooks",
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/marchfederico/hubot-sparkwebhook.git"
+  },
+  "devDependencies": {
+    "coffee-script": "1.1.3"
+  },
+  "main": "./src/sparkwebhook",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/marchfederico/hubot-sparkwebhook/issues"
+  },
+  "homepage": "https://github.com/marchfederico/hubot-sparkwebhook",
+  "dependencies": {
+    "ciscospark": "^0.6.8"
+  }
+}
