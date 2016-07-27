@@ -22,7 +22,7 @@ yo hubot --adapter sparkwebhook
 
 curl -X POST -H "Authorization: Bearer YmQ5Mjk2YjUtM2FlNy00ZGU02Y5mZGEtY2I1OTQ5YzcyOTg4MzYTTTQ3OTktYjMw" -H "Content-Type: application/json"  -d '{
       "name": "hubot",
-      "targetUrl": "http://myhubot/hubot/ciscospark/incoming:8080",
+      "targetUrl": "http://myhubot:8080/hubot/ciscospark/incoming",
       "resource": "all",
       "event": "all"
 }' "https://api.ciscospark.com/v1/webhooks"
