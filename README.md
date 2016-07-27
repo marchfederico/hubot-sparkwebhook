@@ -9,7 +9,7 @@ webhooks.
 
 * Follow the [Getting Started With Hubot](https://hubot.github.com/docs/) guide to get a local installation of Hubot
 * Run the command `yo hubot` and when asked for an adapter, use "sparkwebhook"
-* Create an outgoing "all events" webhook that points to your hubot instance ex. (http://myhubot_url/hubot/ciscospark/incoming:8080)
+* Create an outgoing "all events" webhook that points to your hubot instance ex. (http://myhubot_url:8080/hubot/ciscospark/incoming)
 * Set the environment variable CISCOSPARK_ACCESS_TOKEN to your bot's access token.
 
 ## Example Installation
