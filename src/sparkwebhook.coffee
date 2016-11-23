@@ -25,7 +25,8 @@ class SparkWebhook extends Adapter
       if @isImageDocURL(str)
         sparkclient.messages.create({files:[str],roomId: room})
       else
-        sparkclient.messages.create({text: str, roomId: room})
+        str = '>'+str.replace(/\n/g,"<br>")
+        sparkclient.messages.create({markdown: str, roomId: room})
 
   reply: (envelope, strings...) ->
     @log "Sending reply"
