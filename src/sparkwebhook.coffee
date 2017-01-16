@@ -50,7 +50,7 @@ class SparkWebhook extends Adapter
           .then (messageDetail) ->
             text = null
             if (messageDetail.mentionedPeople) #bot accounts have to be mentioned in cisco spark
-              text = self.robot.name+" "+self.stripMention(messageDetail.html)
+              text = self.robot.name+" "+self.stripMentionText(messageDetail.html,messageDetail.text)
             else # must be a 1:1 room
               text = self.robot.name+" "+messageDetail.text
             author =  {}
@@ -71,6 +71,16 @@ class SparkWebhook extends Adapter
     match = mentionText.match(mentionRegex)
     if match && match.length > 1
       return match[1].trim()+match[2].trim()
+    
+  stripMentionText: (htmlText,text) ->
+    mentionRegex = /(.*)\<spark-mention .*>(.*)<\/spark-mention\>(.*)/i
+    match = htmlText.match(mentionRegex)
+    if match && match.length > 1
+      mentionName = match[2].trim()
+      regex = new RegExp "(.*)"+mentionName+"(.*)", "i"
+      matchText = text.match(regex)
+      if matchText && matchText.length > 1
+        return matchText[1].trim()+" "+matchText[2].trim()
 
   isImageDocURL: (url) ->
     imageDocRegex = /http.*(jpg|jpeg|png|gif|doc|pdf|docx|ppt)$/i
